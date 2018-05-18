@@ -1,8 +1,0 @@
-ros-kinetic-slam-constructor (0.9.0-0jessie) jessie; urgency=high
-
-  * Initial release
-  * Contributors: Artur Huletski, Dmitriy Kartashov, Kirill Krinkin, RomanDegtyar, art32fil
-
- -- OSLL <ros@osll.ru>  Sun, 15 Apr 2018 21:00:00 -0000
-
-
