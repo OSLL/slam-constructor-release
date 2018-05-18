@@ -1,0 +1,13 @@
+Source: ros-kinetic-slam-constructor
+Section: misc
+Priority: extra
+Maintainer: OSLL <ros@osll.ru>
+Build-Depends: debhelper (>= 9.0.0), libgtest-dev, ros-kinetic-catkin, ros-kinetic-geometry-msgs, ros-kinetic-message-filters, ros-kinetic-nav-msgs, ros-kinetic-rosbag-storage, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-tf
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-slam-constructor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-geometry-msgs, ros-kinetic-message-filters, ros-kinetic-nav-msgs, ros-kinetic-rosbag-storage, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-tf
+Description: The package provides implementation of several 2D laser-based simultaneous localization and mapping (SLAM) algorithms (tinySLAM, vinySLAM, GMapping) created with the SLAM constructor framework.
+ The framework provides common SLAM components that may help to develop custom SLAM algorithms and can be accessed by provided links.
