@@ -3,10 +3,12 @@ project(slam_constructor)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3 -pthread -fdiagnostics-color")
 
-# Replace with CMAKE_CXX_STANDARD when CMake 3.1 become available in ROS buildfarm  
-add_compile_options(-std=c++14)
-#set(CMAKE_CXX_STANDARD 14)
-#set(CMAKE_CXX_STANDARD_REQUIRED ON)
+if(${CMAKE_VERSION} VERSION_LESS "3.1")
+  add_compile_options(-std=c++14)
+else()
+  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+endif()
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -32,7 +34,7 @@ add_executable(tiny_slam src/slams/tiny/tiny_slam.cpp)
 add_executable(viny_slam src/slams/viny/viny_slam.cpp)
 #add_executable(viny_slam_x src/slams/vinyx/vinyx_slam.cpp)
 add_executable(path_publisher src/ros/path_publisher.cpp)
-add_executable(p2D_ss_evaluator src/utils/pose2D_search_space_evaluator.cpp)
+#add_executable(p2D_ss_evaluator src/utils/pose2D_search_space_evaluator.cpp)
 
 target_link_libraries(wg_pr2_bag_adapter ${catkin_LIBRARIES})
 target_link_libraries(lslam2D_bag_runner ${catkin_LIBRARIES})
